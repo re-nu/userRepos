@@ -1,0 +1,83 @@
+body{
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgb(196, 198, 248);
+    
+}
+input{
+    border: none;
+    background-color:rgb(196, 198, 248);
+    border-bottom: solid 2px rgb(14, 4, 44) ; 
+}
+button{
+    border: none;
+    background-color:rgb(196, 198, 248);
+}
+button:hover{
+    background-color: rgb(200, 155, 252);
+    transform: scale(1.2);
+    border-radius: 20%;
+}
+button:active{
+    background-color: rgb(29, 3, 51);
+    transform: scale(0.5);
+}
+.container{
+    background-color: rgb(21, 4, 43);
+    margin: 2rem;
+    padding: 2rem;
+    overflow: auto;
+}
+img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.img{
+    
+ display: grid;
+    grid-template-columns: auto auto;
+   
+}
+ .img b{
+    margin-top: 10rem;
+    font-size: 6rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color:  rgb(235, 147, 205);
+
+}
+a{
+    color:rgb(31, 1, 21);
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(37, 3, 56);
+    font-size: 2rem;
+}
+
+.details{
+    display:grid ;
+    grid-template-columns: auto auto auto ;
+    gap: 1.5rem;
+    justify-content: end;
+    margin: 2rem;
+}
+.details div{
+    background-color: rgb(189, 159, 236);
+    padding: 1.5rem;
+    border-radius: 20%;
+    object-fit: cover;
+}
+.details div:hover{
+    transform: scale(1.1);
+}
+@media (max-width:650px) {
+    .details,.img,.details div{
+        display: grid;
+        grid-template-columns: auto;
+        object-fit:fill;
+        overflow: auto;
+    }
+
+}
