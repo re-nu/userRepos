@@ -1,9 +1,9 @@
 
 
-window.alert(" please refresh before searching next user to avoid previous user data ");
 document.body.innerHTML=`
 <input class='userName' type='text' placeholder='enter user-name' value='' >
-<button onclick='getRpo()'>Search</button>
+<button class='srch' onclick='getRpo()'>Search</button>
+<button class='bk' onclick='ref()'>Back</button>
 <section class='container'>
   <div class='img'>
   </div>
@@ -11,12 +11,15 @@ document.body.innerHTML=`
   </div>
 </section>
 `;
-
+    
 async function getRpo() {
-    //take user name
-    var un=document.querySelector('.userName').value;
-    var get=un+"/repos";
-    console.log(get);
+  document.querySelector('.userName').style.display="none";
+  document.querySelector('.srch').style.display="none";
+
+  // user iuput value
+      var un=document.querySelector('.userName').value;
+      var get=un+"/repos";
+      console.log(get);
 
     //get the repos of enter user
      const rps= await fetch("https://api.github.com/users/"+get);
@@ -53,4 +56,7 @@ async function getRpo() {
   
 }
 
+function ref() {
+  location.reload();
+}
  
