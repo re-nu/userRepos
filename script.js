@@ -23,9 +23,15 @@ async function getRpo() {
 
     //get the repos of enter user
      const rps= await fetch("https://api.github.com/users/"+get);
-    const rpsAr= await rps.json();                           //convert json data into array
-  console.log(rpsAr)
-    
+     const rpsAr= await rps.json();                           //convert json data into array
+     
+     console.log(rpsAr)
+     
+      if(rpsAr.message==='Not Found'){                        // if invalid user then msg is
+      window.alert('user not found');                         // not found ,so i used this if
+      return                                                  // for user not found
+    }
+  
   var img=rpsAr[0].owner.avatar_url;                           //get image of user
   var un=rpsAr[0].owner.login;                                 // get user name
 
